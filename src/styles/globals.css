@@ -8,20 +8,128 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-size: 16px; */
+  font-family: "Inter", sans-serif;
+}
+body {
+  background: #7e7ee3;
+  width: 100%;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+
+li {
+  list-style-type: none;
+  color: #999;
+  font-size: 14px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 40px;
+}
+.ant-tabs-nav .ant-tabs-tab-active {
+  color: white !important;
+  background-color: green !important;
+  border: none;
+}
+.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab {
+  padding: 15px 37px;
+  background: #fff;
+  color: #999;
+}
+
+:where(.css-dev-only-do-not-override-19gw05y).ant-select-single:not(
+    .ant-select-customize-input
+  )
+  .ant-select-selector {
+  height: 50px;
+  padding: 9px 11px;
+  width: 235px;
+  font-size: 16px;
+}
+.ant-input-number .ant-input-number-input {
+  color: #999;
+}
+label {
+  color: #555;
+}
+.flight-card {
+  width: 100%;
+  cursor: pointer;
+  line-height: 1.8;
+  transition: all 0.2s ease-in-out;
+}
+.flight-card:hover {
+  width: 100%;
+  box-shadow: 2px 9px 19px 15px #0000001f;
+  transform: scale(1.1);
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.1);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.1);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.1);
+  transition: all 200ms ease-in;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.ant-table-thead {
+  display: none;
+}
+@media screen and (max-width: 860px) {
+  .home {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .homepage {
+    display: flex;
+    flex-direction: column;
+  }
+  .results_menu {
+    display: none;
+  }
+  .ant-select-selector {
+    width: 50px;
+    height: 50px;
+  }
+  :where(.css-dev-only-do-not-override-19gw05y).ant-select-single:not(
+      .ant-select-customize-input
     )
-    rgb(var(--background-start-rgb));
+    .ant-select-selector {
+    width: 80px;
+  }
+  .search-report {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .flight-card {
+    display: flex;
+    justify-content: space-between;
+  }
+  .duration {
+    display: none;
+  }
+  .flightform {
+    width: 100%;
+    max-width: 100%;
+  }
 }
