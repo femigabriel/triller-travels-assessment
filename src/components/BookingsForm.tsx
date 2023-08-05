@@ -80,7 +80,7 @@ export const BookingsForm = () => {
             showSearch
             style={{ width: 220  }}
             placeholder="Select flight class"
-            className="h-[50px text-[18px] font-semibold "
+            className="h-[50px] text-[18px] font-semibold "
             optionFilterProp="children"
             filterOption={(input, option) =>
               (option?.label ?? "").includes(input)
